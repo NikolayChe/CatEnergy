@@ -1,0 +1,14 @@
+.social-icon, .logo-htmlacademy  {
+    fill: #666666;
+    &:hover {
+        fill: #68B738;
+    }   
+}
+.social-icon--facebook path {
+    stroke: #666666;;
+    fill: #666666;;
+    fill-opacity: 0;
+    &:hover {
+        stroke: #68B738;
+    }
+}

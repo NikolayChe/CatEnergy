@@ -1,0 +1,28 @@
+.logo {
+    z-index: 2;
+}
+.logo-tablet, .logo-desktop {
+    display: none;
+}
+.logo-desktop:hover {
+    opacity: 0.8;
+}
+.logo-desktop:visited {
+    opacity: 6;
+}
+@media screen and (width >= $tablet) {
+    .logo-mobile, .logo-desktop, .logo-text {
+        display: none;
+    }
+    .logo-tablet {
+        display: block;
+    }
+}
+@media screen and (width > $desktop) {
+    .logo-mobile, .logo-tablet  {
+        display: none;
+    }
+    .logo-desktop {
+        display: block;
+    }
+}

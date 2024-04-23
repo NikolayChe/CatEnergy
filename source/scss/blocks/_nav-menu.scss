@@ -1,0 +1,135 @@
+.nav-menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column: 1/-1;
+    grid-row: 1;
+    grid-template-rows: minmax(66px, max-content) 1fr;
+    align-items: center;
+    &__list {
+        grid-column: 1/-1;
+        list-style: none;
+        text-align: center;
+        transform: translateY(-20px);
+        animation: ani 1.5s forwards;
+      }
+      @keyframes ani {
+        0% {transform: translateY(-20px);opacity: 0;}
+        100% {transform: translateY(0);opacity: 1;}
+      }
+    &__item {
+        font-family: "Oswald";
+        font-size: 20px;
+        font-weight: 500;
+        text-transform: uppercase;
+        line-height: 1;
+        border-top: 1px solid rgb(231, 231, 231);
+        padding-top: 22.5px;
+        padding-bottom: 23.5px;
+        &:last-child {
+            border-bottom: 1px solid rgb(231, 231, 231);
+        }
+    }
+    &__link {
+        color: #000;
+        text-decoration: none;
+    }
+    &__link:hover {
+        opacity: 0.6;
+    }
+    &__btn {
+        grid-column-start: 3;
+        grid-column-end: auto;
+        justify-self: end;
+        position: relative;
+        width: 24px;
+        height: 16px;
+        background: none;
+        border-style: none;
+        cursor: pointer;
+            span{
+                position: absolute;
+                left: 0;
+                width: 100%;
+                height: 1.5px;
+                background-color: black;
+            }
+            span:nth-child(1){
+                top: 0;
+            }
+            span:nth-child(2){
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            span:nth-child(3){
+                bottom: 0;
+            }
+            &.btn-closed {
+                span:nth-child(1){
+                    top: 50%;
+                    transform: translateY(-50%);
+                    transform: rotate(-45deg);
+                }
+                span:nth-child(2){
+                    transform: rotate(45deg);
+                }
+                span:nth-child(3){
+                    display: none;
+                }
+            }
+    }
+ 
+}
+.nav-hiden {
+    display: none;
+}
+@media screen and (width >= $tablet) {
+    .nav-menu {
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+        &__list {
+            display: flex;
+            padding-top: 5px;
+            gap: 32px;
+            justify-content: space-between;
+            transform: none;
+            animation: none;
+        }
+        &__item {
+            font-family: "Oswald";
+            font-size: 18px;
+            font-weight: 400;
+            text-transform: uppercase;
+            line-height: 24px;
+            border: none;
+            padding: 0;
+            &:last-child {
+               border: none;
+            }
+        }
+        &__link {
+            padding-bottom: 5px;
+        }
+        &__link[href*="/"] {
+                border-bottom: 2px #68B738 solid;
+        }
+        &__btn {
+            display: none;
+        }
+    }
+}
+@media screen and (width > $desktop) {
+    .nav-menu {
+        &__item {
+            font-size: 20px;
+            line-height: normal;
+            z-index: 1;
+            & a{
+                color: #FFF;
+            }
+            & a[href*="/"] {
+                border-bottom: 2px #FFF solid;
+            }
+        }
+    }
+}

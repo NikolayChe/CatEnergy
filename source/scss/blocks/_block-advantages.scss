@@ -1,0 +1,21 @@
+.block-advantages {
+    padding-top: 22px;
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+@media screen and (width > $desktop) {
+    .block-advantages {
+        padding-top: 82px;
+        &__items {
+            flex-direction: row;
+            justify-content: space-around;
+            gap: 80px;
+        }
+        &__item {
+            flex-basis: 50%;
+        }
+    }
+}

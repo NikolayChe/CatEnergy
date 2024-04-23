@@ -1,0 +1,67 @@
+.quality {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__icon {
+        min-width: 60px;
+        height: 60px;
+        background-color: rgb(104, 183, 56);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+    }
+    &__text {
+        font-family: "Arial";
+        font-size: 16px;
+        line-height: 18px;
+        color: rgb(68, 68, 68);
+    }
+    &__number {
+        display: none;
+    }
+}
+@media screen and (width >= $tablet) {
+    .quality {  
+        position: relative;
+        flex: 0 0 50%;
+        flex-direction: column; 
+        align-items: flex-start;
+        row-gap: 77px;
+        padding-bottom: 57px;
+        &__icon {
+            min-width: 80px;
+            height: 80px;
+        }
+        &__text {
+            max-width: 245px;
+        }
+        &__number {
+            position: absolute;
+            top: -80px;
+            right: 0;
+            left: 118px;
+            display: block;
+            z-index: -1;
+            font-family: "Oswald";
+            font-size: 280px;
+            color: rgb(242, 242, 242);
+        }
+    }
+}
+@media screen and (width > $desktop) {
+    .quality {  
+        flex: 0 0 20.2%;
+        &__icon {
+            min-width: 80px;
+            height: 80px;
+        }
+        &__text {
+            max-width: 245px;
+        }
+        &__number {
+            left: auto;
+            right: 0;
+        }
+    }
+}

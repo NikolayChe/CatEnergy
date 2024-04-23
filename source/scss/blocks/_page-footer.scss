@@ -1,0 +1,56 @@
+.page-footer {
+    background-color: rgb(242, 242, 242);
+    padding-top: 39px;
+    padding-bottom: 22px;
+    text-align: center;
+    &__logo-text {
+        margin-bottom: 31.5px;
+    }
+    &__list-icon {
+        margin: 0 auto 28.5px;
+        padding: 20.5px 0;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+        column-gap: 36px;
+        border-top: solid 1px rgb(217, 217, 217);
+        border-bottom: solid 1px rgb(217, 217, 217);
+    }
+    &__logo-academy {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        p {
+            font-family: "Arial";
+            font-size: 16px;
+            line-height: 18px;
+            color: rgb(68, 68, 68);
+        }
+        .logo-academy-link {
+            cursor: pointer;        
+        }
+    }
+}
+@media screen and (width >= $tablet) {
+    .page-footer {
+        &__content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__list-icon {
+            margin: 0   ;
+            border: none;
+            padding: 0;
+        }
+        &__logo-text {
+            margin-bottom: 0;
+        }
+        &__logo-academy {
+            p {
+                padding-right: 22px;
+            }
+        }
+    }
+}

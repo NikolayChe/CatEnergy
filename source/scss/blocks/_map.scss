@@ -1,0 +1,28 @@
+.map {
+    position:relative;
+    overflow:hidden;
+    &__container {
+        position:absolute;
+        top:0;
+        color:#eee;
+        font-size:12px;
+    }
+    &__address {
+        position:absolute;
+        top:14px;
+        color:#eee;
+        font-size:12px;
+    }
+    &__widget {
+        width: 100%;
+        position:relative;
+        height: 362px;
+    }
+}
+@media screen and (width >= $tablet) {
+    .map {
+        &__widget {
+            height: 400px;
+        }
+    }
+}

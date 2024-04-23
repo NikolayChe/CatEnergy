@@ -1,0 +1,67 @@
+@import "fonts";
+@import "variables";
+@import "blocks/page-header";
+@import "blocks/nav-menu";
+@import "blocks/logo";
+@import "blocks/block-contacts";
+@import "blocks/map";
+@import "blocks/page-footer";
+@import "blocks/block-form";
+@import "blocks/form-additionally";
+@import "blocks/form-comment";
+@import "blocks/form-dataсat";
+@import "blocks/form-datauser";
+@import "blocks/btn";
+@import "blocks/item-icon";
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+body {
+    font-family: "Arial, Helvetica, sans-serif";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    min-height: 100vh;
+    min-width: 320px;
+    margin: 0;
+}
+.container {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+h1, h2, h3 {
+    font: inherit;
+}
+input, textarea{
+    border: 1px solid rgb(205, 205, 205);
+}
+input:focus, textarea:focus{
+    outline: 2px solid rgb(68, 68, 68);
+    border: none;
+}
+@media screen and (width >= $tablet) {
+    .container {
+        padding: 0 30px;
+    }
+    .nav-menu {
+        &__item {
+            & a {
+                color: #111111;
+            }
+            & a[href*="/"] {
+                border-bottom: 2px #68B738 solid;
+            }
+        }
+    }
+} 
+@media screen and (width > $desktop) {
+    .container {
+        padding: 0;
+    }
+}

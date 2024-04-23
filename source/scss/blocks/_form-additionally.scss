@@ -1,0 +1,101 @@
+.form-additionally {
+    font-family: "Oswald";
+    border: none;
+    &__title {
+        font-size: 24px;
+        line-height: 26px;
+        margin-bottom: 34px;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 13px;
+        margin-bottom: 34px;
+    }
+    &__item {
+        font-size: 16px;
+        line-height: 18px;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        column-gap: 16px;
+        &:not(:last-child) {
+            margin-bottom: 12px;
+        }
+        .checkbox {
+            display: flex;
+            align-items: center;
+            padding-left: 46px;
+            cursor: pointer;
+            &__input {
+                position: absolute;
+                appearance: none;
+                display: none;
+            }
+            &__style {
+                position: absolute;
+                margin-left: -46px;
+                width: 30px;
+                height: 30px;
+                border: 1px solid rgb(217, 217, 217);
+            }
+        }
+        .checkbox__input:checked + .checkbox__style::before {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                content: "";
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-image: url("../image/check.svg");
+                background-repeat: no-repeat;
+                background-position: center;
+        }
+    }
+}
+@media screen and (width >= $tablet) { 
+    .form-additionally {
+        max-width: 565px;
+        &__title {
+            font-size: 36px;
+            line-height: 1;
+            margin-bottom: 57px;
+        }   
+        &__list {
+            flex-direction: row;
+            flex-wrap: wrap;
+            row-gap: 20px;
+            column-gap: 123px;
+            margin-bottom: 54px;
+        }
+        &__item {
+            flex: 0 0 50%;
+            flex-basis: 221px;
+            font-size: 20px;
+            line-height: 30px;
+            &:not(:last-child) {
+                margin-bottom: 0;
+            }
+            .checkbox__style {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+}
+@media screen and (width > $desktop) {
+    .form-additionally {
+        max-width: 1200px;
+        &__list {
+            row-gap: 0;
+            column-gap: 0;
+            margin-bottom: 61px;
+            justify-content: space-between;
+        }
+        &__item {
+            flex: 0 0 25%;
+            flex-basis: 221px;
+        }
+    }
+}

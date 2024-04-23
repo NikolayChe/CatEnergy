@@ -1,0 +1,38 @@
+.block-quality {
+    padding-top: 27px;
+    padding-bottom: 42px;
+    &__title {
+        font-family: "Oswald";
+        font-size: 36px;
+        line-height: 40px;
+        color: rgb(0, 0, 0);
+        margin-bottom: 38px;
+    }
+    &__items {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+}
+@media screen and (width >= $tablet) {
+    .block-quality {
+        position: relative;
+        padding-top: 45px;
+        &__title {
+            font-size: 60px;
+            line-height: 1;
+            margin-bottom: 72px;
+        }
+        &__items {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+}
+@media screen and (width > $desktop) {
+    .block-quality {
+        &__items {
+            justify-content: space-between;
+        }
+    }
+}

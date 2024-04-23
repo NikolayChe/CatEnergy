@@ -1,0 +1,147 @@
+.card-production {
+   position: relative;
+   max-width: 480px;
+   padding-top: 11px;
+   padding-bottom: 67px;
+   margin: 0 auto;
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 13px;
+    }
+    &__img {
+        flex: 1 1 50%;
+        text-align: center;
+        padding-top: 10px;
+        img {
+            object-fit: cover;
+        }
+    }
+    &__description {
+        flex: 1 1 50%;
+        padding-bottom: 9px;
+    }
+    &__name {
+        font-family: "Oswald";
+        text-transform: uppercase;
+        font-size: 16px;
+        line-height: 20px;
+        max-width: 76px;
+        color: rgb(34, 34, 34);
+        margin-bottom: 18px;
+    }
+    &__characteristics {
+        font-family: "Arial";
+        color: rgb(68, 68, 68);
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+    }
+    &__btn {
+        position: absolute;
+        bottom: 14px;
+        left: 0;
+        width: 100%;
+    }
+}
+.card-production--more {
+    padding-top: 67px;
+    text-align: center;
+    &__info {
+        margin: 0 auto;
+    }
+    &__text-title {
+        font-family: "Oswald";
+        font-size: 16px;
+        line-height: 20px;
+        color: rgb(17, 17, 17);
+        text-transform: uppercase;
+        margin-bottom: 8px;
+    }
+    &__text {
+        font-family: "Arial";
+        color: rgb(68, 68, 68);
+        font-size: 12px;
+        line-height: 16px;
+        margin-bottom: 21px;
+    }
+    &__icon-plus {
+        position: absolute;
+        top: 26.5px;
+        left: calc(50% - 15px);
+    }
+    .card-production__btn {
+            color: #444444;
+            background-color: #F2F2F2;
+    }
+}
+@media screen and (width >= $tablet) {
+    .card-production {
+        margin: 0;
+        background-color: rgb(242, 242, 242);
+        flex: 0 1 50%;
+        flex-basis: 324px;
+        padding: 161px 37.5px 112px;
+        &__info {
+            display: block;
+        }
+        &__img {
+            position: absolute;
+            top: -45px;
+            left: calc(50% - 80.5px);
+        }
+        &__img--big {
+            top: -72px;
+        }
+        &__description {
+            max-width: 211px;
+            text-align: center;
+            margin: 0 auto;
+        }
+        &__name {
+            margin: 0 auto;
+            font-size: 20px;
+            margin-bottom: 21px;
+            line-height: 24px;
+            max-width: 155px;
+        }
+        &__characteristics {
+            font-size: 16px;
+        }
+        &__btn {
+            bottom: 40px;
+            left: calc(50% - 124px);
+            width: 248px;
+        }
+    }
+    .card-production--more {
+        background-color: #fff;
+        border: 2px solid rgb(242, 242, 242);
+        &__icon-plus {
+            top: 52px;
+            left: calc(50% - 30px);
+        }
+        &__info {
+            max-width: 167px;
+        }
+        &__text-title {
+            font-size: 20px;
+            line-height: 22px;
+            margin-bottom: 23px;
+        }
+        &__text {
+            font-size: 16px;
+            line-height: 18px;
+        }
+    }
+}
+@media screen and (width > $desktop) {
+    .card-production {
+        flex: 0 1 25%;
+        flex-basis: 245px;
+        &__btn {
+            left: calc(50% - 79px);
+            width: 168px;
+        }
+      }
+}

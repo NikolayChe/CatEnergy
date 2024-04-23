@@ -1,0 +1,55 @@
+.promo {
+    background-image: url("../image/catalog/promo-bg_mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding-top: 58px;
+    padding-bottom: 43px;
+    &__icon {
+        margin-bottom: 48px;
+    }
+    &__text {
+        margin: 0 auto;
+        color: rgb(255, 255, 255);
+        font-family: "Arial";
+        font-size: 16px;
+        line-height: 20px;
+        max-width: 161px;
+    }
+}
+@media screen and (width >= $tablet) {
+    .promo {
+        padding-left: 78px;
+        background-image: url("../image/catalog/promo-bg_tablet.png");
+        display: flex;
+        align-items: center;
+        text-align: left;
+        &__icon {
+            display: block;
+            margin-bottom: 0;
+            margin-right: 40.8%;
+        }
+        &__text {
+            margin: 0;
+        }
+    }
+}
+@media screen and (width > $desktop) {
+    .promo {
+        width: 245px;
+        padding-left: 0;
+        max-width: 245px;
+        background-image: url("../image/catalog/promo-bg_mobile.png");
+        display: block;
+        text-align: center;
+        &__icon {
+            display: inline;
+            margin-bottom: 46px;
+            margin-right: 0;
+        }
+        &__text {
+            margin: 0 auto;
+        }
+    }   
+}

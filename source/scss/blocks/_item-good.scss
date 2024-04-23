@@ -1,0 +1,57 @@
+.item-good {
+    padding-bottom: 70px;
+    position: relative;
+    &__title {
+        color: rgb(34, 34, 34);
+        font-family: "Oswald";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        text-transform: uppercase;
+        margin-bottom: 13px;
+    }
+    &__characteristics {
+        display: flex;
+        justify-content: space-between;
+        color: rgb(68, 68, 68);
+        font-family: "Arial";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+    }
+    &__btn {
+        position: absolute;
+        bottom: 18.5px;
+        width: 100%;
+    }
+}
+@media screen and (width >= $tablet) {
+    .item-good {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__title {
+            font-size: 20px;
+            margin-bottom: 0;
+        }
+        &__characteristics {
+            column-gap: 51px;
+            font-size: 16px;
+        }
+    }
+}
+@media screen and (width > $desktop) {
+    .item-good {
+        padding: 15px 0;
+        &__title {
+            width: 245px;
+        }
+        &__characteristics {
+            width: 245px;
+        }
+        &__btn {
+            position: static;
+            width: 192px;
+        }
+    } 
+}
