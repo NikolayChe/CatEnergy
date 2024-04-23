@@ -342,7 +342,7 @@
   .block-main__picture {
     position: absolute;
     top: -80px;
-    left: 368px;
+    left: 392px;
   }
   .block-main::after {
     position: absolute;
@@ -1030,6 +1030,10 @@
 }
 
 @media screen and (width >= 768px) {
+  .page-footer {
+    padding-top: 55px;
+    padding-bottom: 61px;
+  }
   .page-footer__content {
     display: flex;
     justify-content: space-between;
@@ -1039,6 +1043,7 @@
     margin: 0;
     border: none;
     padding: 0;
+    column-gap: 27px;
   }
   .page-footer__logo-text {
     margin-bottom: 0;
