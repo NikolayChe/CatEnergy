@@ -458,7 +458,7 @@
 @media screen and (width >= 768px) {
   .item-advantage {
     position: relative;
-    padding: 77px 53px 63px;
+    padding: 77px 53px 55px;
   }
   .item-advantage__title {
     font-size: 36px;
@@ -508,21 +508,21 @@
   }
   .item-advantage_thin .item-advantage__title::before {
     top: calc(50% - 53px);
-    left: -162px;
+    left: -210px;
     width: 100px;
     height: 106px;
     background-image: url("../image/icon-cat_desktop1.svg");
   }
   .item-advantage_massive .item-advantage__title::before {
     top: calc(50% - 50px);
-    left: -181px;
+    left: -230px;
     width: 134px;
     height: 100px;
     background-image: url("../image/icon-cat_desktop2.svg");
   }
   .item-advantage__title {
     margin-left: 214px;
-    margin-bottom: 125px;
+    margin-bottom: 73px;
   }
   .item-advantage__description {
     margin-bottom: 36px;
@@ -596,7 +596,7 @@
     flex: 0 0 50%;
     flex-direction: column;
     align-items: flex-start;
-    row-gap: 77px;
+    row-gap: 31px;
     padding-bottom: 57px;
   }
   .quality__icon {
@@ -841,6 +841,7 @@
   text-transform: uppercase;
   border: none;
   background: none;
+  color: #444444;
 }
 .slider input[type=range] {
   appearance: none;
